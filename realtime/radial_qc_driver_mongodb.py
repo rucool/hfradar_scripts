@@ -31,7 +31,11 @@ logging.basicConfig(stream=sys.stdout, format=log_format, level=log_level)
 
 def qc_data(radial, qc_arguments):
     qc_arguments['radial_file'] = radial
-    qc_radial(**qc_arguments)
+    try:
+        qc_radial(**qc_arguments)
+    except Exception as err:
+        logging.error('{} - {}'.format(radial, err))
+        return
 
 
 if __name__ == '__main__':

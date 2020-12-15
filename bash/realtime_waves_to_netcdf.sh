@@ -10,7 +10,7 @@ date >> $logfile
 
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate hfradar
-python /home/codaradm/operational_scripts/hfradarpy/scripts/realtime/realtime_waves_to_netcdf.py >> $logfile
+python /home/codaradm/operational_scripts/hfradarpy_scripts/realtime/realtime_waves_to_netcdf.py >> $logfile
 conda deactivate
 
 echo ---------------- End ------------------------ >> $logfile
