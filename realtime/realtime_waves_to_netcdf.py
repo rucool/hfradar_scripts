@@ -39,4 +39,4 @@ for site in sites:
         mtime = dt.datetime.fromtimestamp(st.st_mtime)
         if mtime > ago:
             logging.info('{} modified {} days ago'.format(fname, mtime))
-            wave_to_netcdf(fname, save_dir_site)
+            wave_to_netcdf(fname, save_dir_site, reference_time='days since 2006-01-01 00:00:00')
